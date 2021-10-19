@@ -20,16 +20,19 @@
   border-radius: 4px;
   padding: 8px 12px;
   word-break: break-word;
+  background-color: #ffa50063;
+  color: white;
 }
 
 .message-user-name {
   font-size: 0.75rem;
-  padding-left: 12px;
+  padding-left: 2px;
   color: rgb(138, 141, 145);
+  font-weight: 600;
 }
 
 .my-message .message-body {
-  background-color: rgb(0, 132, 255);
+  background-color: #e8eaed3d;
   color: white;
 }
 

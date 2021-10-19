@@ -12,6 +12,8 @@
 .chat-room-top-bar {
   display: flex;
   align-items: center;
+  border-bottom: 5px solid #ffa500;
+  margin-bottom: 10px;
 }
 
 .chat-room-top-bar h1 {
@@ -24,9 +26,14 @@
   overflow: auto;
   border-radius: 7px 7px 0 0;
   margin-bottom: 8px;
+  background-color: #1b1e20;
 }
 
 .messages-list {
   list-style-type: none;
-  padding: 0;
+  padding: 8px;
+}
+
+.room-name {
+  color: white;
 }

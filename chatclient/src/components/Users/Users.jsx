@@ -5,7 +5,7 @@ import './Users.css';
 const Users = ({ users }) => {
   return users.length > 0 ? (
     <div>
-      <h2> Users in this room: </h2>
+      <h2 style={{color:'white'}}> Users in this room: </h2>
       <ul className="user-list">
         {users.map((user, index) => (
           <li key={index} className="user-box">
