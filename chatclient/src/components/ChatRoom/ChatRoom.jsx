@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './ChatRoom.css';
 import useChat from '../../utils/useChat';
 import useTyping from '../../utils/useTyping';
+import { toEncrypt, toDecrypt } from '../../utils/aes.js';
 import ChatMessage from '../ChatMessage/ChatMessage';
 import NewMessageForm from '../NewMessageForm/NewMessageForm';
 import TypingMessage from '../TypingMessage/TypingMessage';
@@ -37,6 +38,8 @@ const ChatRoom = (props) => {
 
   const handleSendMessage = (event) => {
     event.preventDefault();
+    //toEncrypt(newMessage);
+    //toDecrypt(newMessage);
     cancelTyping();
     sendMessage(newMessage);
     setNewMessage('');
