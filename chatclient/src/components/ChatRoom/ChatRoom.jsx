@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import './ChatRoom.css';
 import useChat from '../../utils/useChat';
@@ -42,6 +42,12 @@ const ChatRoom = (props) => {
     setNewMessage('');
   };
 
+  const ScrollToBottom = () => {
+    const messagesEndref = useRef(null);
+    useEffect(() => messagesEndref.current.scrollIntoView({behavior: 'smooth'}));
+    return (<div ref={messagesEndref} />);
+  }
+
   useEffect(() => {
     if(isTyping) {
       startTypingMessage();
@@ -70,6 +76,7 @@ const ChatRoom = (props) => {
           </li>
         ))}
       </ol>
+      <ScrollToBottom />
       </div>
       <NewMessageForm
         newMessage={newMessage}
