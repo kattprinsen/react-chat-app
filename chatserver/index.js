@@ -2,8 +2,8 @@ const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const socketIo = require('socket.io');
-const { addUser, removeUser, getUsersInRoom } = require('./users');
-const { addMessage, getMessagesInRoom } = require('./messages');
+const { addUser, removeUser, getUsersInRoom } = require('./utils/users');
+const { addMessage, getMessagesInRoom } = require('./utils/messages');
 
 const app = express();
 app.use(cors());
@@ -23,6 +23,7 @@ const USER_LEAVE_CHAT_EVENT = 'USER_LEAVE_CHAT_EVENT';
 const NEW_CHAT_MESSAGE_EVENT = 'NEW_CHAT_MESSAGE_EVENT';
 const START_TYPING_MESSAGE_EVENT = 'START_TYPING_MESSAGE_EVENT';
 const STOP_TYPING_MESSAGE_EVENT = 'STOP_TYPING_MESSAGE_EVENT';
+const SECRET_MACROS_LOL = 'SECRET_MACROS_LOL';
 
 io.on('connection', (socket) => {
   console.log(`${socket.id} connected`);
